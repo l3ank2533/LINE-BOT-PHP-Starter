@@ -14,10 +14,20 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = '||'.$event['message']['text'];
 			$str = '';
-			if(strpos($text,"สวัสดี")){
+			if(strpos($text,"ดี")){
 				$str = 'ดีจ้ะน้องสาว';
+			}else if(strpos($text,"ไป")){
+				$str = 'เสม็ดก็ดีนะ';
+			}else if(strpos($text,"ชื่อ")){
+				$str = 'โอ๊คสายเบิร์น';
+			}else if(strpos($text,"ข้าว")){
+				$str = 'ก่อนกินเจต้อง ล้างท้อง เเล้วถ้าก่อนกินน้องพี่ต้อง ล้างอะไร?';
+			}else if(strpos($text,"นอน")){
+				$str = 'นอนไม่หลับรับสมัครคนพาไปกินตับ';
 			}else{
-				$str = 'ไม่หล่อ..แต่อร่อยมาก';
+				$num = rand(0,100);
+				$arr = array('ไม่หล่อ..แต่อร่อยมาก','ร้อยท่า5นาที', 'ถึงหน้าตาจะโซนพม่า. . . แต่ลีลาสไตล์ยุโรป','สุขใจ…เมื่อไกลเมีย….','ถึงเจ้าชู้ แต่ก็รู้ว่าใครสําคัญ','ไปกับพี่ไหมน้อง');
+				$str = $arr[$num];
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
