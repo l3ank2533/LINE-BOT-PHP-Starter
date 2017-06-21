@@ -15,9 +15,9 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			$str = '';
 			if(strpos($text,"สวัสดี")){
-				$str = 'ดีจ้ะน้องสาว'
+				$str = 'ดีจ้ะน้องสาว';
 			}else{
-				$str = 'ไม่หล่อ..แต่อร่อยมาก'
+				$str = 'ไม่หล่อ..แต่อร่อยมาก';
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
