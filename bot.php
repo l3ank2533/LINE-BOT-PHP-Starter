@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			$str = '';
-			if(strstr($text,"สวัสดี")){
+			if(strpos($text,"สวัสดี")){
 				$str = 'ดีจ้ะน้องสาว'
 			}else{
 				$str = 'ไม่หล่อ..แต่อร่อยมาก'
